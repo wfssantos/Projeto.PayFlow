@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayFlow.Api", "PayFlow.Api\PayFlow.Api.csproj", "{425C6D35-90F5-563E-FA56-17110DE28A45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayFlow.Application", "PayFlow.Application\PayFlow.Application.csproj", "{BC060D77-82FD-47C5-BD09-930B40DF95A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayFlow.Infrastructure", "PayFlow.Infrastructure\PayFlow.Infrastructure.csproj", "{B42C1115-85FC-4851-8B0C-730742B6DD7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayFlow.Domain", "PayFlow.Domain\PayFlow.Domain.csproj", "{6D8E4B05-F69A-44CF-99DB-E2677EBC0052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayFlow.Test", "PayFlow.Test\PayFlow.Test.csproj", "{12DC2CC4-D8EE-439A-BBAC-F37CA2216E1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{425C6D35-90F5-563E-FA56-17110DE28A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425C6D35-90F5-563E-FA56-17110DE28A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425C6D35-90F5-563E-FA56-17110DE28A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425C6D35-90F5-563E-FA56-17110DE28A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC060D77-82FD-47C5-BD09-930B40DF95A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC060D77-82FD-47C5-BD09-930B40DF95A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC060D77-82FD-47C5-BD09-930B40DF95A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC060D77-82FD-47C5-BD09-930B40DF95A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42C1115-85FC-4851-8B0C-730742B6DD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42C1115-85FC-4851-8B0C-730742B6DD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42C1115-85FC-4851-8B0C-730742B6DD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42C1115-85FC-4851-8B0C-730742B6DD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D8E4B05-F69A-44CF-99DB-E2677EBC0052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D8E4B05-F69A-44CF-99DB-E2677EBC0052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D8E4B05-F69A-44CF-99DB-E2677EBC0052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D8E4B05-F69A-44CF-99DB-E2677EBC0052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DC2CC4-D8EE-439A-BBAC-F37CA2216E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DC2CC4-D8EE-439A-BBAC-F37CA2216E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DC2CC4-D8EE-439A-BBAC-F37CA2216E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DC2CC4-D8EE-439A-BBAC-F37CA2216E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D93A69B5-2ACA-4341-ACDF-9638AE5F45B4}
+	EndGlobalSection
+EndGlobal

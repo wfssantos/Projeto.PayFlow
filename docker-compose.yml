@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  payflow-api:
+    build:
+      context: .
+      dockerfile: PayFlow.Api/Dockerfile
+    container_name: payflow-api
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+    restart: always

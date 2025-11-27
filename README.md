@@ -1,127 +1,51 @@
 📘 PayFlow – Arquitetura, Camadas e Fluxo da Aplicação
-
 O PayFlow é um projeto construído seguindo princípios de Clean Architecture, SOLID e DDD (Domain-Driven Design).
 O objetivo é fornecer uma estrutura clara, desacoplada e extensível para o processamento de pagamentos.
 
 🏛️ Arquitetura Geral
-
 A solução está organizada em quatro camadas principais:
 
-PayFlow.Api        → Camada de apresentação (controllers)
-PayFlow.Application → Casos de uso + DTOs
-PayFlow.Domain      → Regras de negócio + Entidades + Interfaces
+PayFlow.Api            → Camada de apresentação (controllers)
+PayFlow.Application    → Casos de uso + DTOs
+PayFlow.Domain         → Regras de negócio + Entidades + Interfaces
 PayFlow.Infrastructure → Provedores externos e implementações
-
 
 Cada camada possui responsabilidades bem definidas e comunicação direcionada:
 
 API → Application → Domain
-
 Infrastructure implementa Domain, mas nunca é chamada diretamente pela API.
 
 📂 1. PayFlow.Domain (Domínio)
-
-É o coração do sistema, contendo:
-
 Entidades
+→ Payment
+→ PaymentRequest
 
 Interfaces
+→ IPaymentProvider
 
-Regras de negócio
-
-Contratos de provedores
-
-Exemplos:
-
-Entidades
-
-Payment
-
-PaymentRequest
-
-Interfaces
-
-IPaymentProvider
-
-A camada Domain não conhece nenhuma tecnologia externa.
-Não sabe o que é banco, API, controller, nada.
+A camada Domain não conhece nenhuma tecnologia externa. Não sabe o que é banco, API, controller, nada.
 ⚠️ Isso garante independência total.
 
 📂 2. PayFlow.Application (Aplicação)
-
 Contém:
-
-Casos de Uso (Use Cases)
-
+→ Casos de Uso (Use Cases)
 DTOs
-
-Regras de orquestração (mas não de domínio)
-
-Exemplo principal:
-
-Use Case
-
-ProcessPaymentUseCase
-
-Responsabilidades:
-
-Validar dados iniciais
-
-Escolher o provedor adequado
-
-Chamar o provedor
-
-Calcular valores de retorno
-
-Mapear resultado para DTO
-
-DTOs
-
-PaymentRequestDto
-
-PaymentResultDto
-
-ProviderResultDto
-
-A camada Application depende apenas de Domain.
+→ Regras de orquestração (mas não de domínio)
 
 📂 3. PayFlow.Infrastructure (Infraestrutura)
+Onde ficam implementações concretas de IPaymentProvider
 
-Onde ficam:
-
-Implementações concretas de IPaymentProvider
-
-Acesso a APIs externas
-
-Persistência (caso exista)
-
-Integrações reais
-
-Exemplos:
-
-FastPayProvider
-
-SecurePayProvider
+→ Acesso a APIs externas
+→ Persistência (caso exista)
+→ Integrações reais
+→ → FastPayProvider
+→ → SecurePayProvider
 
 Essa camada implementa as interfaces definidas no domínio, mantendo baixo acoplamento.
 
 📂 4. PayFlow.Api (Apresentação – Web API)
-
 Exposição de endpoints HTTP.
-
-Controllers
-
-PaymentsController
-
-Funções:
-
-Receber request JSON
-
-Model binding e validação
-
-Invocar o caso de uso
-
-Devolver PaymentResultDto
+→ PaymentsController
 
 A camada API não conhece detalhes de provedores nem lógica de negócios.
 
